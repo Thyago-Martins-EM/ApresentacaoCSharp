@@ -16,7 +16,7 @@ namespace ApresentacaoCSharp
             this.Numero = numeroDeContas;
         }
 
-        public int Numero { get; set; }
+        public int Numero { get; private set; }
         public double Saldo { get; protected set; }
         public string Titular { get; set; }
         public abstract void Deposita(double valor);

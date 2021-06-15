@@ -14,3 +14,19 @@ C:\Users\Thyago\source\repos\ApresentacaoCSharp\ApresentacaoCSharp\obj\Debug\net
 C:\Users\Thyago\source\repos\ApresentacaoCSharp\ApresentacaoCSharp\obj\Debug\net5.0\ref\ApresentacaoCSharp.dll
 C:\Users\Thyago\source\repos\ApresentacaoCSharp\ApresentacaoCSharp\obj\Debug\net5.0\ApresentacaoCSharp.pdb
 C:\Users\Thyago\source\repos\ApresentacaoCSharp\ApresentacaoCSharp\obj\Debug\net5.0\ApresentacaoCSharp.genruntimeconfig.cache
+C:\Users\EM Estagio\source\repos\ApresentacaoCSharp\ApresentacaoCSharp\bin\Debug\net5.0\ApresentacaoCSharp.exe
+C:\Users\EM Estagio\source\repos\ApresentacaoCSharp\ApresentacaoCSharp\bin\Debug\net5.0\ApresentacaoCSharp.deps.json
+C:\Users\EM Estagio\source\repos\ApresentacaoCSharp\ApresentacaoCSharp\bin\Debug\net5.0\ApresentacaoCSharp.runtimeconfig.json
+C:\Users\EM Estagio\source\repos\ApresentacaoCSharp\ApresentacaoCSharp\bin\Debug\net5.0\ApresentacaoCSharp.runtimeconfig.dev.json
+C:\Users\EM Estagio\source\repos\ApresentacaoCSharp\ApresentacaoCSharp\bin\Debug\net5.0\ApresentacaoCSharp.dll
+C:\Users\EM Estagio\source\repos\ApresentacaoCSharp\ApresentacaoCSharp\bin\Debug\net5.0\ref\ApresentacaoCSharp.dll
+C:\Users\EM Estagio\source\repos\ApresentacaoCSharp\ApresentacaoCSharp\bin\Debug\net5.0\ApresentacaoCSharp.pdb
+C:\Users\EM Estagio\source\repos\ApresentacaoCSharp\ApresentacaoCSharp\obj\Debug\net5.0\ApresentacaoCSharp.csprojAssemblyReference.cache
+C:\Users\EM Estagio\source\repos\ApresentacaoCSharp\ApresentacaoCSharp\obj\Debug\net5.0\ApresentacaoCSharp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\EM Estagio\source\repos\ApresentacaoCSharp\ApresentacaoCSharp\obj\Debug\net5.0\ApresentacaoCSharp.AssemblyInfoInputs.cache
+C:\Users\EM Estagio\source\repos\ApresentacaoCSharp\ApresentacaoCSharp\obj\Debug\net5.0\ApresentacaoCSharp.AssemblyInfo.cs
+C:\Users\EM Estagio\source\repos\ApresentacaoCSharp\ApresentacaoCSharp\obj\Debug\net5.0\ApresentacaoCSharp.csproj.CoreCompileInputs.cache
+C:\Users\EM Estagio\source\repos\ApresentacaoCSharp\ApresentacaoCSharp\obj\Debug\net5.0\ApresentacaoCSharp.dll
+C:\Users\EM Estagio\source\repos\ApresentacaoCSharp\ApresentacaoCSharp\obj\Debug\net5.0\ref\ApresentacaoCSharp.dll
+C:\Users\EM Estagio\source\repos\ApresentacaoCSharp\ApresentacaoCSharp\obj\Debug\net5.0\ApresentacaoCSharp.pdb
+C:\Users\EM Estagio\source\repos\ApresentacaoCSharp\ApresentacaoCSharp\obj\Debug\net5.0\ApresentacaoCSharp.genruntimeconfig.cache
