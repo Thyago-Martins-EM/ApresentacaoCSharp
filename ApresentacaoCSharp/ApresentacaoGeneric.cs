@@ -6,17 +6,8 @@ using System.Threading.Tasks;
 
 namespace ApresentacaoCSharp
 {
-    class ApresentacaoGeneric
+    public class ApresentacaoGeneric
     {
-        static public List<T> CriaLista<T>(params T[] pars)
-        {
-            List<T> lista = new List<T>();
-            foreach(T elem in pars)
-            {
-                lista.Add(elem);
-            }
 
-            return lista;
-        }
     }
 }

@@ -6,17 +6,22 @@ using System.Threading.Tasks;
 
 namespace ApresentacaoCSharp
 {
-    class GeradorDeExtrato
+    class GeradorDeExtrato 
     {
-        public void DadosDaOperacao(Conta conta, double valor)
+        public double Valor { get; set; }
+        public int NumConta { get; set; }
+        public double SaldoAnterior { get; set; }
+        public string Operacao { get; set; }
+        public string Titular { get; set; }
+        public double SaldoAtual { get; set; }
+        public string Horario { get; set; }
+
+        List<GeradorDeExtrato> ex = new List<GeradorDeExtrato>();
+        public void DadosDaOperacao()
         {
             DateTime agora = DateTime.Now;
-            string horario = String.Format("{0: d/M/ yyyy HH:mm:ss}",agora);
-
-            Console.WriteLine("Titular: " + conta.Titular);
-            Console.WriteLine("Valor: " + valor);
-            Console.WriteLine("Operação: " + conta.ToString().);
-            Console.WriteLine("Horario: " + horario);
+            this.Horario = String.Format("{0: d/M/yyyy HH:mm:ss}",agora);
         }
+  
     }
 }

@@ -22,7 +22,7 @@ namespace ApresentacaoCSharp
 
         public override void Saca(double valor)
         {
-            if(valor > Saldo)
+            if (valor > Saldo)
             {
                 throw new ArgumentException();
             }
