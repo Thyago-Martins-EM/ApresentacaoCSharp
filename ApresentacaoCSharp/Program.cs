@@ -10,19 +10,23 @@ namespace ApresentacaoCSharp
         
         static void Main()
         {
-            int numConta = 2;
+            int numConta = 1;
             GeradorDeExtrato extrato = new GeradorDeExtrato();
 
             List<Conta> lista = ListaConta.GetContas();
             Conta conta = lista.FirstOrDefault(lc => lc.Numero == numConta);
-            extrato.SaldoAnterior = conta.Saldo;
-            double valor = 100;
-            conta.Saca(valor);
-            extrato.NumConta = numConta;
             extrato.Titular = conta.Titular;
-            extrato.Operacao = nameof(ContaCorrente.Saca);
+            extrato.NumConta = conta.Numero;
+            extrato.SaldoAnterior = conta.Saldo;
+            extrato.Valor = 100;
+            conta.Deposita(extrato.Valor);
+            extrato.Operacao = nameof(ContaCorrente.Deposita);
             extrato.SaldoAtual = conta.Saldo;
-            extrato.DadosDaOperacao();
+            extrato.DadosDaOperacao(extrato);
+            extrato.MostraRelatorio();
+           // new ApresentacaoGeneric().MostraValorServico(conta, extrato.Valor);
+
+            //new ApresentaUpDowncasting().RealizaTeste();
 
         }
     }

@@ -8,6 +8,7 @@ namespace ApresentacaoCSharp
 {
     class GeradorDeExtrato 
     {
+
         public double Valor { get; set; }
         public int NumConta { get; set; }
         public double SaldoAnterior { get; set; }
@@ -17,10 +18,25 @@ namespace ApresentacaoCSharp
         public string Horario { get; set; }
 
         List<GeradorDeExtrato> ex = new List<GeradorDeExtrato>();
-        public void DadosDaOperacao()
+        public void DadosDaOperacao(GeradorDeExtrato extrato)
         {
             DateTime agora = DateTime.Now;
             this.Horario = String.Format("{0: d/M/yyyy HH:mm:ss}",agora);
+            ex.Add(extrato);
+            
+        }
+
+        public void MostraRelatorio()
+        {
+            ex.ForEach(le => Console.WriteLine("Conta: " + le.NumConta
+                                               + "\nTitular: " + le.Titular
+                                               + "\nOperação: " + le.Operacao
+                                               + "\nSaldo Anterior: " + le.SaldoAnterior.ToString("F")
+                                               + "\nValor:  " + le.Valor.ToString("F")
+                                               + "\nSaldo Atual: " + le.SaldoAtual.ToString("F")
+                                               + "\nHorario: " + le.Horario
+                                              )
+            );
         }
   
     }
