@@ -8,6 +8,7 @@ namespace ApresentacaoCSharp
 {
     public class ApresentacaoGeneric
     {
+        //Repensar ideia de classe ou metodo Generic
         ContaCorrente c1 = new ContaCorrente();
         public void MostraValorServico<T>(T conta, double valor)
         {

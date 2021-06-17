@@ -10,6 +10,7 @@ namespace ApresentacaoCSharp
         
         static void Main()
         {
+            //Organizar chamadas das classes que vão ser usadas para apresentação
             int numConta = 1;
             GeradorDeExtrato extrato = new GeradorDeExtrato();
 

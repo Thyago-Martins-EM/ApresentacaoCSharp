@@ -23,7 +23,7 @@ namespace ApresentacaoCSharp
             DateTime agora = DateTime.Now;
             this.Horario = String.Format("{0: d/M/yyyy HH:mm:ss}",agora);
             ex.Add(extrato);
-            
+            //Criar Classe ListaExtrato para incluir alguns valores para realizar teste LINQ
         }
 
         public void MostraRelatorio()

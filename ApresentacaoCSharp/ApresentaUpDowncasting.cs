@@ -18,10 +18,9 @@ namespace ApresentacaoCSharp
             f.Deposita(valor);
             Console.WriteLine("Deposito Realizado com Sucesso!!!");
             Console.WriteLine("Numero Conta: " + f.Numero + "\n" + "Titular Conta: " + f.Titular + "\n" + "Saldo Conta: " + f.Saldo.ToString("C"));
-            //Utiliza metodo generico em vez do 
-    
-            /*
+
             //Downcast com is
+            /*
             if (c4 is ContaCorrente)
             {
                 ContaCorrente ct = (ContaCorrente)c4;
@@ -33,6 +32,7 @@ namespace ApresentacaoCSharp
                 Console.WriteLine("Taxa de serviço isenta!!!");
             }
             */
+
             //Downcast com as: 
             ContaCorrente ct = f as ContaCorrente;
 
