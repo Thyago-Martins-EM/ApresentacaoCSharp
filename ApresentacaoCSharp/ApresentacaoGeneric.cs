@@ -8,12 +8,12 @@ namespace ApresentacaoCSharp
 {
     public class ApresentacaoGeneric
     {
-        ContaCorrente _conta = new ContaCorrente();
+        ContaCorrente c1 = new ContaCorrente();
         public void MostraValorServico<T>(T conta, double valor)
         {
             if (conta is ContaCorrente)
             {
-                Console.WriteLine("Total do valor do serviço descontado: " + this._conta.DescontaServico(valor).ToString("C"));
+                Console.WriteLine("Total do valor do serviço descontado: " + this.c1.DescontaServico(valor).ToString("C"));
             }
             else
             {
