@@ -31,5 +31,11 @@ namespace ApresentacaoCSharp
                 Saldo -= valor;
             }
         }
+
+        public void Transferencia(double valor, Conta destino)
+        {
+            Saca(valor);
+            destino.Deposita(valor);
+        }
     }
 }

@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace ApresentacaoCSharp
 {
-    class GeradorDeExtrato 
+    public class GeradorDeExtrato 
     {
-
         public double Valor { get; set; }
         public int NumConta { get; set; }
         public double SaldoAnterior { get; set; }
@@ -17,26 +16,25 @@ namespace ApresentacaoCSharp
         public double SaldoAtual { get; set; }
         public string Horario { get; set; }
 
-        List<GeradorDeExtrato> ex = new List<GeradorDeExtrato>();
-        public void DadosDaOperacao(GeradorDeExtrato extrato)
+        public string HoraEvento()
         {
             DateTime agora = DateTime.Now;
             this.Horario = String.Format("{0: d/M/yyyy HH:mm:ss}",agora);
-            ex.Add(extrato);
+            return this.Horario;
             //Criar Classe ListaExtrato para incluir alguns valores para realizar teste LINQ
         }
 
         public void MostraRelatorio()
         {
-            ex.ForEach(le => Console.WriteLine("Conta: " + le.NumConta
+            /*ex.ForEach(le => Console.WriteLine("Conta: " + le.NumConta
                                                + "\nTitular: " + le.Titular
                                                + "\nOperação: " + le.Operacao
                                                + "\nSaldo Anterior: " + le.SaldoAnterior.ToString("F")
                                                + "\nValor:  " + le.Valor.ToString("F")
                                                + "\nSaldo Atual: " + le.SaldoAtual.ToString("F")
-                                               + "\nHorario: " + le.Horario
+                                               + "\nHorario: " + le.Horario + "\n"
                                               )
-            );
+            );*/
         }
   
     }

@@ -8,6 +8,6 @@ namespace ApresentacaoCSharp
 {
     class Servico
     {
-        // Vai ter metodos de acordo com os tipos de servicos que vão está vinculados a classe ContaCorrente
+        // Vai ter metodos de acordo com os tipos de servicos que estão vinculados a classe ContaCorrente
     }
 }

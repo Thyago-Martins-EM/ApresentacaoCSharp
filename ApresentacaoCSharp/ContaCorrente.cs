@@ -32,6 +32,12 @@ namespace ApresentacaoCSharp
             }
         }
 
+        public void Transferencia(double valor, Conta destino) 
+        {
+            Saca(valor);
+            destino.Deposita(valor);
+        }
+
         public double DescontaServico (double valor)
         {
             valor *= 0.05;

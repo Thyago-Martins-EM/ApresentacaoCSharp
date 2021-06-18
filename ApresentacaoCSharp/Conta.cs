@@ -12,7 +12,7 @@ namespace ApresentacaoCSharp
 
         public Conta()
         {
-            Conta.numeroDeContas++;
+            numeroDeContas++;
             this.Numero = numeroDeContas;
         }
 
@@ -21,10 +21,5 @@ namespace ApresentacaoCSharp
         public string Titular { get; set; }
         public abstract void Deposita(double valor);
         public abstract void Saca(double valor);
-
-        public static int ProximoNumero()
-        {
-            return numeroDeContas + 1;
-        }
     }
 }
