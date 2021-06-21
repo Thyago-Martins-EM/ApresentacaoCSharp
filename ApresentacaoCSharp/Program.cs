@@ -6,65 +6,47 @@ namespace ApresentacaoCSharp
 {
     public class Program
     {
-
-        
         static void Main()
         {
-            //Organizar chamadas das classes que vão ser usadas para apresentação
-
-            /*int numConta = 1;
-            GeradorDeExtrato dados = new GeradorDeExtrato();
+            
             ListaConta.PreencheListaConta();
             ListaExtrato.PreencheListaExtrato();
+            bool fimApp = false;
 
-            Conta conta = ListaConta.listaContas.FirstOrDefault(lc => lc.Numero == numConta);
+            Console.WriteLine("Bem vindo a Apresentação, informe uma das tecnicas que deseja apresentar:\r");
+            
 
-            dados.Titular = conta.Titular;
-            dados.NumConta = conta.Numero;
-            dados.SaldoAnterior = conta.Saldo;
-            dados.Valor = 90;
-            conta.Deposita(dados.Valor);
-            dados.Operacao = nameof(ContaCorrente.Deposita);
-            dados.SaldoAtual = conta.Saldo;
+            while(!fimApp)
+            {
+                Console.WriteLine("1: Upcast e Downcast\n2: Classe Generic\n3: LINQ");
 
-            ListaExtrato.listaExtrato.Add(dados);
+                int opcao = Convert.ToInt32(Console.ReadLine());
 
-            ListaExtrato.listaExtrato.ForEach(ex => Console.WriteLine(ex.Operacao + "\n" + ex.Titular + "\n" + ex.NumConta));
-            */
+                switch (opcao)
+                {
+                    case 1:
+                        new ApresentaUpDowncasting().RealizaTeste();
+                    break;
 
-            // new ApresentacaoGeneric().MostraValorServico(conta, extrato.Valor);
+                    case 2:
+                        Console.WriteLine("Chama a classe Apresentageneric e seus metodos");
+                    break;
 
-            //new ApresentaUpDowncasting().RealizaTeste();
+                    case 3:
+                        new ApresentaLINQ().ApresentaResultados();
+                    break;
 
-            /*Realiza saque e envia a operação para a classe GeradorDeExtrato
-            double valor;
-            double saldoAnterior;
-            string operacao;
-            List<Conta> lista = ListaConta.GetContas();
-            Conta conta = lista.FirstOrDefault(lc => lc.Numero == 2);
-            saldoAnterior = conta.Saldo;
-            valor = 100;
-            conta.Saca(valor);
-            operacao = nameof(ContaCorrente.Saca);
-            new GeradorDeExtrato().DadosDaOperacao(valor, saldoAnterior, operacao, conta);
+                    default:
+                        Console.WriteLine("Opcao invalida!");
+                    break;
+                }
 
-            Console.WriteLine("Conta: " + conta.Numero + "\nTitular: " + conta.Titular + "\nOperação: " + operacao + "\nSaldo Anterior: " + saldoAnterior + "\nValor:  " + valor + "\nSaldo Atual: " + conta.Saldo);
-            */
+                Console.WriteLine("Deseja continuar apresentando?\n S para sim, N para não: ");
+                if (Console.ReadLine() == "N")
+                    fimApp = true;
+            }
 
-            /*
-             Conta c1 = new ContaCorrente();
-                c1.Titular = "Thyago";
-                double valor = 100.50;
-                c1.Deposita(valor);
-                var operacao = nameof(ContaCorrente.Deposita);
-                new GeradorDeExtrato().DadosDaOperacao(c1.Titular, valor, operacao, c1);
-                valor = 50.5;
-                c1.Saca(valor);
-                operacao = nameof(ContaCorrente.Saca);
-
-                GeradorDeExtrato extrato = new GeradorDeExtrato();
-                extratos.ForEach(ls => Console.WriteLine(extrato));
-             */
+            return;            
         }
     }
 }

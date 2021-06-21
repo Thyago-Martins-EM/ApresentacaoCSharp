@@ -16,7 +16,7 @@ namespace ApresentacaoCSharp
             }
             else
             {
-                Saldo += valor-this.DescontaServico(valor);
+                Saldo += valor;
             }
         }
 
@@ -38,10 +38,5 @@ namespace ApresentacaoCSharp
             destino.Deposita(valor);
         }
 
-        public double DescontaServico (double valor)
-        {
-            valor *= 0.05;
-            return valor;
-        }
     }
 }

@@ -9,18 +9,17 @@ namespace ApresentacaoCSharp
     public class ApresentacaoGeneric
     {
         //Repensar ideia de classe ou metodo Generic
-        ContaCorrente c1 = new ContaCorrente();
-        public void MostraValorServico<T>(T conta, double valor)
+        ContaCorrente ct = new ContaCorrente();
+        public void MostraValorServico<T>(T conta, double valor, T destino)
         {
             if (conta is ContaCorrente)
             {
-                Console.WriteLine("Total do valor do serviço descontado: " + this.c1.DescontaServico(valor).ToString("C"));
+                
             }
             else
             {
-                Console.WriteLine("Taxa de serviço isenta!!!");
+                Console.WriteLine("Serviço não habiliatado para esse tipo de conta!!!");
             }
         }
-
     }
 }

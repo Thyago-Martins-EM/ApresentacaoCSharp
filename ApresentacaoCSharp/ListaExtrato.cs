@@ -21,8 +21,9 @@ namespace ApresentacaoCSharp
             dados1.SaldoAnterior = conta.Saldo;
             dados1.Valor = 30;
             conta.Deposita(dados1.Valor);
-            dados1.Operacao = nameof(ContaCorrente.Saca);
+            dados1.Operacao = "Deposito";
             dados1.SaldoAtual = conta.Saldo;
+            dados1.HoraEvento();
             listaExtrato.Add(dados1);
 
             GeradorDeExtrato dados2 = new GeradorDeExtrato();
@@ -32,8 +33,9 @@ namespace ApresentacaoCSharp
             dados2.SaldoAnterior = conta.Saldo;
             dados2.Valor = 90;
             conta.Saca(dados2.Valor);
-            dados2.Operacao = nameof(ContaCorrente.Saca);
+            dados2.Operacao = "Saque";
             dados2.SaldoAtual = conta.Saldo;
+            dados2.HoraEvento();
             listaExtrato.Add(dados2);
 
             GeradorDeExtrato dados3 = new GeradorDeExtrato();
@@ -42,8 +44,10 @@ namespace ApresentacaoCSharp
             dados3.NumConta = conta.Numero;
             dados3.SaldoAnterior = conta.Saldo;
             dados3.Valor = 90;
-            dados3.Operacao = nameof(ContaCorrente.Saca);
+            conta.Saca(dados2.Valor);
+            dados3.Operacao = "Saque";
             dados3.SaldoAtual = conta.Saldo;
+            dados3.HoraEvento();
             listaExtrato.Add(dados3);
         }
     }
