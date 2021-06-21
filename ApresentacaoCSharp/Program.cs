@@ -11,6 +11,7 @@ namespace ApresentacaoCSharp
             
             ListaConta.PreencheListaConta();
             ListaExtrato.PreencheListaExtrato();
+            
             bool fimApp = false;
 
             Console.WriteLine("Bem vindo a Apresentação, informe uma das tecnicas que deseja apresentar:\r");
@@ -29,7 +30,7 @@ namespace ApresentacaoCSharp
                     break;
 
                     case 2:
-                        Console.WriteLine("Chama a classe Apresentageneric e seus metodos");
+                        new ApresentacaoGeneric().ApresentaGeneric();
                     break;
 
                     case 3:
@@ -41,7 +42,7 @@ namespace ApresentacaoCSharp
                     break;
                 }
 
-                Console.WriteLine("Deseja continuar apresentando?\n S para sim, N para não: ");
+                Console.WriteLine("\n\nDeseja continuar apresentando?\n S para sim, N para não: ");
                 if (Console.ReadLine() == "N")
                     fimApp = true;
             }

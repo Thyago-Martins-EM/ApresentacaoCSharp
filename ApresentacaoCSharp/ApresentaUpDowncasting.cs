@@ -59,7 +59,7 @@ namespace ApresentacaoCSharp
                         ListaExtrato.listaExtrato.Add(dadosExtrato);
                         break;
 
-                    // Para utilizar o metodo transferencia é utilizado a tecnica de Downcast pois a variavél conta
+                    // Para utilizar o metodo transferencia é preciso utilizar a tecnica de Downcast, pois a variavél conta
                     // recebu um objeto ContaCorrente que foi aplicado Upcast para que restringisse o objeto
                     // a somente as opções da classe Conta.
                     case "T":

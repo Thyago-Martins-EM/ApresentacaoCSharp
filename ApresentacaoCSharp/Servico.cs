@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace ApresentacaoCSharp
 {
-    class Servico
+    public class Servico
     {
-        // Vai ter metodos de acordo com os tipos de servicos que estão vinculados a classe ContaCorrente
+        public string Nome { get; set; }
+        public double Valor { get; set; }
+        public string Contratente { get; set; }
+        public int NumConta { get; set; }
     }
 }
