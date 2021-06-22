@@ -15,6 +15,11 @@ namespace ApresentacaoCSharp
             ConsultasComLINQ consultas = new ConsultasComLINQ();
             consultas.PreencheListaServico();
 
+            /*
+             *O LINQ (consulta integrada à linguagem) é o nome de um conjunto de tecnologias com base na integração de recursos de consulta
+             *diretamente na linguagem C#
+            */
+
             while (!fimConsulta)
             {
                 Console.WriteLine("\nInforme qual consulta deseja realizar: " + 
@@ -36,7 +41,7 @@ namespace ApresentacaoCSharp
                     break;
 
                     case 2:
-                        Console.WriteLine("\nEscolha uma das contas para consultar:\n");
+                        Console.WriteLine("\nEscolha uma das contas para mostrar o total de saques:\n");
                         Console.WriteLine("Titular\t" + "\tNumero da Conta\t" + "\tSaldo");
                         ListaConta.listaContas.ForEach(lc => Console.WriteLine(lc.Titular + "\t\t" + lc.Numero + "\t\t\t" + lc.Saldo.ToString("C")));
                         num = Convert.ToInt32(Console.ReadLine());
@@ -44,7 +49,7 @@ namespace ApresentacaoCSharp
                     break;
 
                     case 3:
-                        Console.WriteLine("\nEscolha uma das contas para consultar:\n");
+                        Console.WriteLine("\nEscolha uma das contas para mostrar total de depositos:\n");
                         Console.WriteLine("Titular\t" + "\tNumero da Conta\t" + "\tSaldo");
                         ListaConta.listaContas.ForEach(lc => Console.WriteLine(lc.Titular + "\t\t" + lc.Numero + "\t\t\t" + lc.Saldo.ToString("C")));
                         num = Convert.ToInt32(Console.ReadLine());
@@ -52,11 +57,11 @@ namespace ApresentacaoCSharp
                     break;
 
                     case 4:
-                        consultas.MostraMediaTotalDoSaldo();
+                        consultas.MostraMediaTotalDoSaldo(); //Mostra a media total do saldo de todas as contas
                     break;
 
                     case 5:
-                        Console.WriteLine("\nEscolha uma das contas para consultar:\n");
+                        Console.WriteLine("\nEscolha uma das contas para mostrar o serviços vinculados:\n");
                         Console.WriteLine("Titular\t\t" + "Numero Conta");
                         ListaConta.listaContas.ForEach(lc => Console.WriteLine(lc.Titular + "\t\t" + lc.Numero));
                         num = Convert.ToInt32(Console.ReadLine());

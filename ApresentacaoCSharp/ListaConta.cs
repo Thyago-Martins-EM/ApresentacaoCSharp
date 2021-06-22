@@ -12,7 +12,7 @@ namespace ApresentacaoCSharp
         public static void PreencheListaConta()
         {
 
-            Conta c1 = new ContaCorrente();
+            Conta c1 = new ContaCorrente();//<< Realizando Upcasting, atribuição de objeto de uma classe filha para uma referência de uma classe base.
             c1.Titular = "Victor";
             c1.Deposita(700);
             listaContas.Add(c1);

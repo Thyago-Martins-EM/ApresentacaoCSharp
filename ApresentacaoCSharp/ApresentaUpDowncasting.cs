@@ -20,6 +20,7 @@ namespace ApresentacaoCSharp
                 GeradorDeExtrato dadosExtrato = new GeradorDeExtrato();
                 double valor;
 
+                Console.WriteLine("\nEscolha uma das contas para consultar:\n");
                 Console.WriteLine("Titular\t" + "\tNumero da Conta\t" + "\tSaldo");
                 ListaConta.listaContas.ForEach(lc => Console.WriteLine(lc.Titular + "\t\t" + lc.Numero + "\t\t\t" + lc.Saldo.ToString("C")));
                 num = Convert.ToInt32(Console.ReadLine());
