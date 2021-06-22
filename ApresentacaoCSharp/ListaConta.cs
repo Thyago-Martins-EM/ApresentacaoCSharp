@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace ApresentacaoCSharp
 {
-    //Conferir se classe está criada nos padrões corretos
     public class ListaConta
     {
         public static List<Conta> listaContas = new List<Conta>(); 

@@ -31,8 +31,6 @@ namespace ApresentacaoCSharp
 
         public void MostraJoin(int numConta)
         {
-            //List<Conta> contas = ListaConta.listaContas;
-
             var query = from c in contas
                         join s in servicos
                         on c.Numero equals s.NumConta
@@ -43,6 +41,7 @@ namespace ApresentacaoCSharp
                             nomeServico = s.Nome,
                             valorServico = s.Valor
                         };
+
             Console.WriteLine("\nContratante\t" + "Serviço\t" + "\t\tValor do Servico");
             foreach (var resultado in query)
             {
@@ -54,7 +53,6 @@ namespace ApresentacaoCSharp
 
         public void MostraTotalSaques(int numConta)
         {
-            //List<GeradorDeExtrato> operacao = ListaExtrato.listaExtrato;
             var resultado = from op in operacao where op.NumConta == numConta && op.Operacao == "Saque" select op;
             double total = resultado.Sum(ex => ex.Valor);
             Console.WriteLine("Total de saques realizados: " + total.ToString("C"));
@@ -62,7 +60,6 @@ namespace ApresentacaoCSharp
 
         public void MostraTotalDepositos(int numConta)
         {
-            //List<GeradorDeExtrato> operacao = ListaExtrato.listaExtrato;
             var resultado = from op in operacao where op.NumConta == numConta && op.Operacao == "Deposito" select op;
             double total = resultado.Sum(ex => ex.Valor);
             Console.WriteLine("Total de saques realizados: " + total.ToString("C"));
@@ -70,8 +67,6 @@ namespace ApresentacaoCSharp
 
         public void MostraMediaTotalDoSaldo()
         {
-            //List<Conta> contas = ListaConta.listaContas;
-            //var resultado = from ct in contas select ct;
             double media = contas.Average(sd => sd.Saldo);
             Console.WriteLine("Medi total do Saldo de todas as contas: " + media.ToString("C"));
         }

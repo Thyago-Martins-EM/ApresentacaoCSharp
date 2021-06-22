@@ -14,6 +14,7 @@ namespace ApresentacaoCSharp
             int num = 0;
             ConsultasComLINQ consultas = new ConsultasComLINQ();
             consultas.PreencheListaServico();
+
             while (!fimConsulta)
             {
                 Console.WriteLine("\nInforme qual consulta deseja realizar: " + 
@@ -66,6 +67,7 @@ namespace ApresentacaoCSharp
                         Console.WriteLine("Opcao invalida!");
                     break;
                 }
+
                 Console.WriteLine("\n\nDeseja continuar as consultas?\n S para sim, N para não: ");
                 if (Console.ReadLine() == "N")
                     fimConsulta = true;

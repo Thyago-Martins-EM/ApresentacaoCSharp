@@ -10,10 +10,10 @@ namespace ApresentacaoCSharp
     {
         public void RealizaTeste()
         {
+
             bool fimOperacao = false;
             int num = 0;
             
-
             while (!fimOperacao)
             {
 
