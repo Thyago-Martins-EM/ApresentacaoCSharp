@@ -8,27 +8,31 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\EM Estagio\\.nuget\\packages\\": {}
+    "C:\\Users\\Thyago\\.nuget\\packages\\": {},
+    "D:\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\EM Estagio\\source\\repos\\ApresentacaoCSharp\\ApresentacaoCSharp\\ApresentacaoCSharp.csproj",
+      "projectUniqueName": "C:\\Users\\Thyago\\source\\repos\\ApresentacaoCSharp\\ApresentacaoCSharp\\ApresentacaoCSharp.csproj",
       "projectName": "ApresentacaoCSharp",
-      "projectPath": "C:\\Users\\EM Estagio\\source\\repos\\ApresentacaoCSharp\\ApresentacaoCSharp\\ApresentacaoCSharp.csproj",
-      "packagesPath": "C:\\Users\\EM Estagio\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\EM Estagio\\source\\repos\\ApresentacaoCSharp\\ApresentacaoCSharp\\obj\\",
+      "projectPath": "C:\\Users\\Thyago\\source\\repos\\ApresentacaoCSharp\\ApresentacaoCSharp\\ApresentacaoCSharp.csproj",
+      "packagesPath": "C:\\Users\\Thyago\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Thyago\\source\\repos\\ApresentacaoCSharp\\ApresentacaoCSharp\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "D:\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\EM Estagio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Thyago\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {}
       },
       "frameworks": {
         "net5.0": {
@@ -60,7 +64,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
       }
     }
   }

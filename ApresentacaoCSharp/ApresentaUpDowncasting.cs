@@ -20,8 +20,8 @@ namespace ApresentacaoCSharp
                 GeradorDeExtrato dadosExtrato = new GeradorDeExtrato();
                 double valor;
 
-                Console.WriteLine("Escolha uma das contas a qual deseja operar:");
-                ListaConta.listaContas.ForEach(lc => Console.WriteLine("\tTitular: " + lc.Titular + "\tNumero da Conta: " + lc.Numero +"\tSaldo: " + lc.Saldo));
+                Console.WriteLine("Titular\t" + "\tNumero da Conta\t" + "\tSaldo");
+                ListaConta.listaContas.ForEach(lc => Console.WriteLine(lc.Titular + "\t\t" + lc.Numero + "\t\t\t" + lc.Saldo.ToString("C")));
                 num = Convert.ToInt32(Console.ReadLine());
                 Conta conta = ListaConta.listaContas.FirstOrDefault(lc => lc.Numero == num);
                 dadosExtrato.Titular = conta.Titular;
@@ -39,7 +39,7 @@ namespace ApresentacaoCSharp
                         Console.WriteLine("Informeo valor a ser sacado:");
                         valor = Convert.ToInt32(Console.ReadLine());
                         conta.Saca(valor);
-                        ListaConta.listaContas.ForEach(lc => Console.WriteLine("Titular: "+ lc.Titular +"\nSaldo: " + lc.Saldo));
+                        Console.WriteLine("Titular: " + conta.Titular + "\nSaldo: " + conta.Saldo.ToString("C"));
                         dadosExtrato.Operacao = "Saque";
                         dadosExtrato.Valor = valor;
                         dadosExtrato.SaldoAtual = conta.Saldo;
@@ -51,7 +51,7 @@ namespace ApresentacaoCSharp
                         Console.WriteLine("Informeo valor a ser depositado:");
                         valor = Convert.ToInt32(Console.ReadLine());
                         conta.Deposita(valor);
-                        ListaConta.listaContas.ForEach(lc => Console.WriteLine("Titular: " + lc.Titular + "\nSaldo: " + lc.Saldo));
+                        Console.WriteLine("Titular: " + conta.Titular + "\nSaldo: " + conta.Saldo.ToString("C"));
                         dadosExtrato.Operacao = "Deposito";
                         dadosExtrato.Valor = valor;
                         dadosExtrato.SaldoAtual = conta.Saldo;
@@ -75,7 +75,7 @@ namespace ApresentacaoCSharp
                             Console.WriteLine("Informe o valor a ser transferido: ");
                             valor = Convert.ToDouble(Console.ReadLine());
                             ct.Transferencia(valor, destino);
-                            ListaConta.listaContas.ForEach(lc => Console.WriteLine("Titular: " + lc.Titular + "\nSaldo: " + lc.Saldo));
+                            Console.WriteLine("Titular: " + ct.Titular + "\nSaldo: " + ct.Saldo);
                             dadosExtrato.Operacao = "Transferência";
                             dadosExtrato.Valor = valor;
                             dadosExtrato.SaldoAtual = conta.Saldo;
@@ -84,7 +84,7 @@ namespace ApresentacaoCSharp
                         }
                         else
                         {
-                            Console.WriteLine("O tipo dessa conta não permite transferencias");
+                            Console.WriteLine("\nO tipo dessa conta não permite transferencias");
                         }
 
                         break;
@@ -93,7 +93,7 @@ namespace ApresentacaoCSharp
                         break;
                 }
 
-                Console.WriteLine("Deseja continuar apresentando Upcast e Downcast?\n \tS para sim N para não: ");
+                Console.WriteLine("\nDeseja continuar apresentando Upcast e Downcast?\n \tS para sim N para não: ");
                 if (Console.ReadLine() == "N")
                     fimOperacao = true;
             }

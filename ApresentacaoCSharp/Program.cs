@@ -14,7 +14,7 @@ namespace ApresentacaoCSharp
             
             bool fimApp = false;
 
-            Console.WriteLine("Bem vindo a Apresentação, informe uma das tecnicas que deseja apresentar:\r");
+            Console.WriteLine("\nBem vindo a Apresentação, informe uma das tecnicas que deseja apresentar:\n");
             
 
             while(!fimApp)

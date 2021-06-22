@@ -8,8 +8,6 @@ namespace ApresentacaoCSharp
 {
     public class ApresentaLINQ
     {
-        
-
         public void ApresentaResultados()
         {
             bool fimConsulta = false;
