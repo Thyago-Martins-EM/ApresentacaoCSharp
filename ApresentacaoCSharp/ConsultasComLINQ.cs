@@ -31,6 +31,10 @@ namespace ApresentacaoCSharp
 
         public void MostraJoin(int numConta)
         {
+            //dynamic obetodinamico = new {
+               // Nome1="teste",
+           // };
+
             var query = from c in contas
                         join s in servicos
                         on c.Numero equals s.NumConta
@@ -43,18 +47,25 @@ namespace ApresentacaoCSharp
                         };
 
             Console.WriteLine("\nContratante\t" + "Serviço\t" + "\t\tValor do Servico");
+
+            exibeResultado(query);
+            
+
+        }
+
+        private void exibeResultado(IEnumerable<dynamic> query)
+        {
             foreach (var resultado in query)
             {
-                
+
                 Console.WriteLine(resultado.nomeContratante + "\t\t" + resultado.nomeServico + "\t\t" + resultado.valorServico.ToString("C"));
             }
-
         }
 
         public void MostraTotalSaques(int numConta)
         {
             var resultado = from op in operacao where op.NumConta == numConta && op.Operacao == "Saque" select op;
-            double total = resultado.Sum(ex => ex.Valor);
+            double total = resultado.Sum(ex => ex.Valor );
             Console.WriteLine("Total de saques realizados: " + total.ToString("C"));
         }
 

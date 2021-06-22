@@ -17,7 +17,7 @@ namespace ApresentacaoCSharp
             while (!fimApresentacao)
             {
 
-                Console.WriteLine("\nPara apresentar Array e List digite 1 e aperte enter\n" +
+                Console.WriteLine("\nPara apresentar ArrayList e List digite 1 e aperte enter\n" +
                                   "Para apresentar uma siples apresentação com generic digite 2 e aperte enter");
                 switch (Convert.ToInt32(Console.ReadLine()))
                 {
@@ -30,7 +30,7 @@ namespace ApresentacaoCSharp
                         ListaConta.listaContas.ForEach(lc => Console.WriteLine("\tTitular: " + lc.Titular + "\tNumero da Conta: " + lc.Numero + "\tSaldo: " + lc.Saldo.ToString("C")));//Lista os dados da ListaConta
                         num = Convert.ToInt32(Console.ReadLine());
                         Conta conta = ListaConta.listaContas.FirstOrDefault(lc => lc.Numero == num);//Seleciona um registro do tipo conta na ListaConta e guarda em um objeto conta
-                        MostraTipoDeConta(conta);//Envia um objeto para o metodo generico MostraTipoDeConta e retorna se a conta é Conta Corrente ou Poupança 
+                        MostraTipoDeConta(conta as ContaCorrente);//Envia um objeto para o metodo generico MostraTipoDeConta e retorna se a conta é Conta Corrente ou Poupança 
                         break;
                 }
 
@@ -91,14 +91,17 @@ namespace ApresentacaoCSharp
             }
             
         }
-        public void MostraTipoDeConta<T>(T objeto)
+        public void MostraTipoDeConta<T>(T objeto) where T: Conta
+
         {
             if (objeto is ContaPoupanca)
             {
                 Console.WriteLine("É uma conta Poupança");
             }
-            else if (objeto is ContaCorrente)
+            else if (objeto is ContaCorrente ct)
             {
+
+                ContaCorrente contaCorrente = (Conta) objeto;
                 Console.WriteLine("É uma conta Corrente");
             }
             else
